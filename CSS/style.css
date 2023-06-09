@@ -1,0 +1,133 @@
+/* defining variables */
+:root {
+    --darkSlateGrey: hsl(234, 29%, 20%);
+    --charcoalGrey: hsl(235, 18%, 26%);
+    --grey: hsl(231, 7%, 60%);
+    --white: hsl(0, 0%, 100%);
+}
+
+
+body {
+    margin:0;
+    padding:0;
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    font-size:16px; 
+}
+
+/* typography */
+
+p {
+    font-size: 1rem; /* rem is compared to html font size*/
+}
+
+h1{
+    font-size: 2 rem;
+}
+
+/* setting the viewport */
+.page-wrapper {
+    margin: 0 auto;
+}
+
+/* display:block, display:inline-block; and no edeclaration are different containers */
+
+picture.hero img {
+    width:100%; /* if I apply width: 100%,image takes up the whole width. This is default setting.*/
+} 
+
+/* sign up form */
+
+.sign-up {
+    padding: 1rem;
+   
+}
+.sign-up ul {
+    padding:0
+}
+
+/* alternative way */
+
+/* .sign-up ul li {
+    list-style: none;
+} */
+
+/* .sign-up ul li::before {
+    content: url('/assets/images/icon-list.svg');
+    margin-right: 10px;
+    
+} */
+
+.sign-up li {
+    list-style-image:url("/assets/images/icon-list.svg");
+    margin-left: 1rem;
+}
+
+.sign-up_form {
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.sign-up_form label{
+    display:block;
+    margin-bottom: 0.4rem;
+}
+
+.sign-up_form input, .sign-up_form button {
+    border-radius: 5px;
+    width:100%;
+    box-sizing: border-box;
+    padding: 0.8rem;
+    border: 1px solid var (--grey)
+   
+}
+
+.sign-up_form button {
+    background-color: var(--darkSlateGrey);
+    color: var(--white);
+    border: none;
+    margin-top: 1rem;
+}
+
+@media only screen and (min-width:576px) {
+    .page-wrapper {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        margin: 10rem auto;
+        padding: 1rem;
+        border-radius: 5px;
+        background-color: var(--white);
+        width: 50%;
+    }
+
+    header, section.sign-up {
+        width:50%;
+    }
+
+    section.sign-up {
+        display:flex;
+        flex-direction: column;
+        align-content: center;
+    }
+
+body{
+    background-color: hsl(235, 18%, 26%);
+}
+}
+
+#myModal {
+    display: none;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    margin:0 auto;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left:0;
+}
+
