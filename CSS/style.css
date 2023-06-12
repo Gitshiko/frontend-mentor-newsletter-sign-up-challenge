@@ -36,7 +36,7 @@ h1{
 
 picture.hero img {
     width:100%; /* if I apply width: 100%,image takes up the whole width. This is default setting.*/
-} 
+}
 
 /* sign up form */
 
@@ -45,25 +45,26 @@ picture.hero img {
    
 }
 .sign-up ul {
-    padding:0
+    padding-left:0;
 }
 
-/* alternative way */
+.sign-up ul li {
+    padding-top: 2rem;
+    /* list-style-type: none; */ /*This seems not necessary*/
+    display: flex;
+    flex-shrink: 0; /*word-wrap for the text*/
+} 
 
-/* .sign-up ul li {
-    list-style: none;
-} */
-
-/* .sign-up ul li::before {
+.sign-up ul li::before {
     content: url('/assets/images/icon-list.svg');
-    margin-right: 10px;
-    
-} */
+    margin-right: 15px;
+}
 
-.sign-up li {
+/* This is an alternative way */
+/* .sign-up li {
     list-style-image:url("/assets/images/icon-list.svg");
     margin-left: 1rem;
-}
+} */
 
 .sign-up_form {
     width: 100%;
@@ -89,6 +90,10 @@ picture.hero img {
     color: var(--white);
     border: none;
     margin-top: 1rem;
+}
+
+.sign-up_form button:hover {
+    background-color: hsl(235, 33%, 35%);
 }
 
 @media only screen and (min-width:576px) {
